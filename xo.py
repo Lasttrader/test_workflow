@@ -7,6 +7,7 @@ def get_menu():
     key = input('Введжите значение: ')
     return key
 
+#Функция проверки выйгрыша
 def get_check(field):
     #проверям линии
     lines_check_list = []
@@ -30,7 +31,6 @@ def get_check(field):
         if set(column) == set(['x']):
             print('Пользователь X выйиграл по горизонтали')
 
-
 #Игра
 def get_game():
     if int(get_menu()) == 1:
@@ -41,7 +41,6 @@ def get_game():
         for i in range(len(field)):
             print(i, field[i])
     print('введите координаты ячейки')
-    
     game = ' '
     while game == ' ':
         x = int(input('Введите номер строки 0,1,2: '))
@@ -60,5 +59,6 @@ def get_game():
             print('введите корректные значения')
         game = input('нажмите пробел и Enter для продолжения, или любую клавишу и Enter дял выхода')
 
+#запускаем игру
 get_game()
 
